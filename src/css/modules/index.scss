@@ -1,0 +1,83 @@
+// COLORS
+$white: #ffffff;
+$gray: #a1a1a1;
+
+// MEDIA QUERIES
+$desktop: "(min-width: 1280px)";
+
+.index {
+	width: 85%;
+	max-width: 1400px;
+	margin: 0 auto;
+
+	&__content {
+		margin-top: 50px;
+	}
+
+	&__text {
+		margin: 20px 0;
+		font-size: 16px;
+		line-height: 1.4;
+	}
+
+	&__select {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	&__select2 {
+		margin-top: 20px;
+		width: 100%;
+
+		@media #{$desktop} {
+			width: 720px;
+		}
+
+		& .select__field {
+			&_open {
+				& .select__option {
+					border-color: transparent;
+				}
+			}
+		}
+
+		& .select__option {
+			border: 1px solid $gray;
+		}
+
+		& .select__clear {
+			width: 20px;
+			height: 24px;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyAKIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogd2lkdGg9IjE2LjdweCIgaGVpZ2h0PSIxOC43cHgiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiICBzdHJva2U9InJnYigxNjEsIDE2MSwgMTYxKSIgc3Ryb2tlLXdpZHRoPSIxLjhweCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBmaWxsPSJub25lIgogZD0iTTEyLjkwMCw2LjMwOSBMMTIuOTAwLDEzLjYxMSBDMTIuOTAwLDE0LjcxNiAxMi4wMDUsMTUuNjExIDEwLjkwMCwxNS42MTEgTDQuOTAwLDE1LjYxMSBDMy43OTUsMTUuNjExIDIuOTAwLDE0LjcxNiAyLjkwMCwxMy42MTEgTDIuOTAwLDYuMzA5ICIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiICBzdHJva2U9InJnYigxNjEsIDE2MSwgMTYxKSIgc3Ryb2tlLXdpZHRoPSIxLjhweCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBmaWxsPSJub25lIgogZD0iTTEwLjA4Myw2LjMwOSBMMTAuMDgzLDEzLjM5OSBNNS43ODAsMTMuMzk5IEw1Ljc4MCw2LjMwOSAiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiAgc3Ryb2tlPSJyZ2IoMTYxLCAxNjEsIDE2MSkiIHN0cm9rZS13aWR0aD0iMS44cHgiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBmaWxsPSJub25lIgogZD0iTTAuOTAwLDIuODczIEwxNC45MDAsMi44NzMgIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgIHN0cm9rZT0icmdiKDE2MSwgMTYxLCAxNjEpIiBzdHJva2Utd2lkdGg9IjEuOHB4IiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgZmlsbD0ibm9uZSIKIGQ9Ik01LjkwMCwwLjg5OSBMOS45MDAsMC44OTkgIi8+Cjwvc3ZnPg==);
+			background-size: contain;
+		}
+	}
+
+	&__btns {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.title {
+	margin: 20px 0;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.btn {
+	display: block;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	margin: 10px 0;
+	font-size: 16px;
+	color: $white;
+	background-color: $gray;
+	text-align: center;
+	cursor: pointer;
+}
+

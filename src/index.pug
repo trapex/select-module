@@ -6,7 +6,26 @@ block head
 	//+loadCSS('/css/promo.css')
 
 block content
-
+	.index
+		.index__content
+			h1.title Пример 1. Селект выбора страны
+			.index__select
+			br
+			br
+			.index__text
+				| Начальное значение { id: "50", name: "Дания" }
+				br
+				| Ниже кнопки показывают примеры управления селектом "снаружи"
+			.index__btns
+				.btn.index__set Установить
+				.btn.index__error Установить ошибочно
+				.btn.index__clear Очистить селект
+				.btn.index__current Текущее значение
+		.index__content
+			h1.title Пример 2. Немного кастомизированный селект с именами
+			.index__select2
+			//-.index__text
+				| Начальное значение не задано. Немно
 
 block footer
 	script(src="/js/main.bundle.js")
