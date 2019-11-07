@@ -215,6 +215,10 @@ function buildConfig() {
 			]
 		},
 		mode: IS_PRODUCTION ? 'production' : 'development',
+		// optimization: {
+		// 	minimize: false
+		// },
+		devtool: 'source-map',
 		plugins: [],
 		resolve: {}
 	};
