@@ -1,0 +1,60 @@
+
+
+
+
+
+
+/// media break point
+/// @param {Size} $min [1200px] - width
+/// @param {Size} $max [1800px] - width
+
+
+@mixin breakPoint ($min, $max: null){
+	@if ($max) {
+		@media (min-width: #{$min}) and (max-width: #{$max - 1px}){
+			@content;
+		}
+	}
+	@else {
+		@media (min-width: #{$min}) {
+			@content;
+		}
+	}
+}
+
+
+
+/// Grid site
+/// @param {Number} $columns [12] - column lines count
+/// @param {Size} $gutter [1%] - gutter width
+/// @param {Size} $offset [0] - side offset
+/// @param {Color} $color [rgba(45, 132, 190, 0.2)] - lines color
+
+///	body {
+///		&:before{
+///			content: '';
+///			@include grid();
+///		}
+///	}
+
+@mixin grid($columns: 12, $gutter: 1%, $offset: 0, $color: rgba(45, 132, 190, 0.2)){
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: calc(100% - (2 * #{$offset}));
+	height: 100vh;
+	content: '';
+	background-image: repeating-linear-gradient(
+			to right,
+			$color,
+			$color calc((100% / #{$columns}) - #{$gutter}),
+			transparent calc((100% / #{$columns}) - #{$gutter}),
+			transparent calc(100% / #{$columns})
+	);
+	background-size: calc(100% + #{$gutter}) 100%;
+	z-index: 1000;
+	pointer-events: none;
+}
