@@ -45,6 +45,12 @@ $desktop: "(min-width: 1280px)";
 			border: 1px solid $gray;
 		}
 
+		& .select__item {
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+		}
+
 		& .select__clear {
 			width: 20px;
 			height: 24px;
